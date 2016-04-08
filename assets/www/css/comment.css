@@ -1,0 +1,54 @@
+// main a { color: #333;}
+main .clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden}
+main .clearfix { height:1%;}
+main .comment{overflow-x: hidden;}
+main span.glyphicon-menu-left{
+        position:absolute;
+        top:20px;left:15px;
+        z-index:5;
+        position:absolute;
+        top:2%;left:2%;
+}
+main #list { margin: 0 auto; text-align:left; width: 100%;}
+main .box { border-top: 1px solid #eee; position: relative; padding: 10px 10px;}
+main .box:hover .close { display: block;}
+main .close { display: none; top:0px; right: 0px; width: 28px; height: 28px; border: 1px solid #eee; position: absolute; background: #f2f4f7; line-height: 27px; text-align: center;}
+main .close:hover { background: #c8d2e2; text-decoration: none;}
+main .head { float: left; width: 8%; height: 8%; margin-right: 10px;}
+main .content { float: left; width: 85%;}
+main .main { margin-bottom: 10px;}
+main .txt { margin-bottom: 10px; line-height: 1.5em; }//width: 50%;
+main .user { color: #369; }
+main .pic { margin-right: 5px; width: 80%; max-width: 400px; border: 1px solid #eee;}
+main .comment-box { padding: 10px 0;  }
+main .comment-box:hover { background: rgb(247, 247, 247);}
+main .comment-box .myhead { float: left; width: 30px; height: 30px; margin-right: 10px;}
+main .comment-box .comment-content { float: left; }
+main .comment-box .comment-content .comment-text{
+        line-height: 1.3em; display: inline-block; color:#000;
+}
+main .comment-box .comment-content .comment-text span{color: #369;}
+main .comment-box .comment-content .comment-time { color: #ccc; margin-top: 3px; line-height: 16px; position: relative;}
+main .comment-box .comment-content .comment-operate { display: none; color: #369; height: 20px;  position: absolute; bottom: 0px; right: 10px;}
+main .comment-box .comment-content:hover .comment-operate { display: inline-block;}
+main .text-box .comment { border: 1px solid #eee; display: block; height: 30px; width: 50%; padding: 5px; resize: none; color: #ccc}
+main .text-box .btn { font-size: 12px; font-weight: bold; display: none; float: right; width: 65px; height: 25px;  color: #fff; background: #54D2C4; margin-top: 10px;}
+main .text-box .btn-off { border: 1px solid #ccc; color: #ccc; background: #F7F7F7;}
+main .text-box .word{ display: none; float: right; margin: 7px 10px 0 0; color: #666;margin-top: 20px;}
+main .text-box-on .comment{ height: 50px; color: #333;}
+main .text-box-on .btn{ display: inline; float:left; }
+main .text-box-on .word{ display: inline; float:left;padding-left: 10px;}
+main .container{padding-left:0px;}
+
+// 鍙戝竷鐓х墖鐨勬椂闂�
+// main .info { height: 20px; line-height: 19px; font-size: 12px; margin: 0 0 10px 0;}
+// main .info .time { color: #ccc; float: left; height: 20px; padding-left: 20px; background: url("../img/bg1.jpg") no-repeat left top;}
+// main .info .praise { color: #369; float: right; height: 20px; padding-left: 18px; background: url("../img/bg2.jpg") no-repeat left top;}
+// main .info .praise:hover { text-decoration: underline; background: url("../img/bg3.jpg") no-repeat left top;}
+// main .praises-total { margin: 0 0 10px 0; height: 20px; background: url("../img/praise.png") no-repeat 5px 5px rgb(247, 247, 247); padding: 5px 0 5px 25px; line-height: 19px;}
+
+// 鐐硅禐
+// main .comment-box .comment-content .comment-praise { display: none; color: #369; padding-left: 17px; height: 20px; background: url("../img/praise.png") no-repeat;  position: absolute; bottom: 0px; right: 44px;}
+// main .comment-box .comment-content:hover .comment-praise { display: inline-block;}
+ 
+   

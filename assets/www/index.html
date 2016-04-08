@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="Zh-cn" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <title>首页</title>
+</head>
+<body>
+    <a href="#cd-nav" class="cd-nav-trigger">Menu<span><!--创建菜单按钮--></span>
+    </a>
+    <main>
+		<section class="cd-section index cd-selected">
+			<div class="cd-content" style="background: #93E2CD;">
+				<div class="header">
+					<h1>Let It Music: Time to Go Crazy</h1>
+				</div>
+
+				<div class="main">
+					<div class="page_container">
+						<canvas width="100%" height="100%" class="snow"></canvas>
+					</div>
+				</div>
+			</div>
+		</section> <!-- cd-section -->
+	</main>
+
+    <nav class="cd-nav-container" id="cd-nav">
+		<header>
+			<h3>导航</h3>
+			<a href="#0" class="cd-close-nav">Close</a>
+		</header>
+
+		<ul class="cd-nav">
+			<li class="cd-selected" data-menu="index">
+				<a href="index.html">
+					<span class="glyphicon glyphicon-home" style="font-size: 40px ;"></span>
+					<em>首页</em>
+				</a>
+			</li>
+
+			<li data-menu="careers">
+				<a href="musicList.html">
+					<span class="glyphicon glyphicon-music" style="font-size: 40px ;"></span>
+					<em>我的音乐</em>
+				</a>
+			</li>
+
+			<li data-menu="projects">
+				<a href="mood.html">						
+					<span class="glyphicon glyphicon-edit" style="font-size: 40px;"></span>
+					<em>我的心情</em>
+				</a>
+			</li>
+
+			<li data-menu="about">
+				<a href="love.html">	
+					<span class="glyphicon glyphicon-heart" style="font-size: 40px ;"></span>
+					<em>最爱Music</em>
+				</a>
+			</li>
+
+			<!-- <li data-menu="services">
+				<a href="#">
+					<span class="glyphicon glyphicon-cloud" style="font-size: 40px ;color:#40CAAD"></span>
+
+					<em>Weather</em>
+				</a>
+			</li> -->
+
+			
+			<!-- <li data-menu="contact">
+				<a href="#">
+					<span class="glyphicon glyphicon-gift" style="font-size: 40px ;color:#40CAAD"></span>
+						
+
+					<em>About</em>
+				</a>
+			</li> -->
+		</ul> <!-- .cd-3d-nav -->
+	</nav>
+    <div class="cd-overlay">
+        <!-- shadow layer visible when navigation is visible -->
+    </div>
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/main.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+	<script type="text/javascript">
+	$(document).ready( function() {
+		$("canvas.snow").home({
+			windPower: 0,
+			speed: 0,
+			color: "#F21313",
+			size:80,
+			opacity: 0.00000001,
+			count: 25,
+			interaction: false
+		});
+	});
+	</script>
+</body>
+</html>

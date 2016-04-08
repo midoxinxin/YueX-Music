@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="Zh-cn" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>最爱Music</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" type="text/css" href="css/musicList.css">
+<link rel="stylesheet" type="text/css" href="css/comment.css">
+
+</head>
+
+<body>
+    <a href="#cd-nav" class="cd-nav-trigger">Menu<span><!-- used to create the menu icon --></span>
+    </a>
+    <!-- .cd-nav-trigger -->
+    <main>
+		<section class="cd-section musicList cd-selected">
+			<div class="cd-content">
+				<div class="list" id="collectList">
+					<header>最爱Music</header>
+					<ul id="my_collectList"></ul>
+
+					<!-- 控制暂停 -->
+					<div id="player">
+						<div class="playback icon"></div>	
+					</div>
+				</div>
+
+				<div class="disc hide">
+					<span class="glyphicon glyphicon-menu-left"></span>
+
+					<!-- 改-珺 -->
+					<div class="music" id="music">
+						<!-- <img src="img/music_pointer.png"> -->
+						<img src="img/music_disc.png" id="music_disc" class="play">
+					</div>
+					<span class="glyphicon glyphicon-heart" id="collector"></span> <!-- glyphicon-heart -->
+					<span class="glyphicon glyphicon-edit"></span>
+					<canvas id="canvasFormAudio"></canvas>
+					<!-- <audio id="audio" >你的浏览器不支持audio标签</audio> -->
+				</div>
+
+				<div id="comment0" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">小幸运——</span>桃子鱼仔的Ukulele教室
+	                                </p>
+	                                <img class="pic" src="img/music01.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                                <div class="comment-box clearfix" user="other">
+	                                    <img class="myhead" src="img/img5.jpg" alt=""/>
+	                                    <div class="comment-content">
+	                                        <p class="comment-text"><span class="user">泛泛：</span>与你相遇，好幸运，可我已失去为你泪流满面的权利。</p>
+	                                        <p class="comment-time">
+	                                            2014-02-19 14:36
+	                                            <a href="javascript:;" class="comment-operate">回复</a>
+	                                        </p>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment1" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                       <!--  <a class="close" href="javascript:;">×</a> -->
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">一起老去——</span>薛凯琪,陈意涵,杨子珊
+	                                </p>
+	                                <img class="pic" src="img/music02.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_1" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                                <div class="comment-box clearfix" user="other">
+	                                    <img class="myhead" src="img/img1.jpg" alt=""/>
+	                                    <div class="comment-content">
+	                                        <p class="comment-text"><span class="user">小惠酱：</span>很珍惜一路有你们在。希望我们都可以幸福！</p>
+	                                        <p class="comment-time">
+	                                            2014-02-19 14:36
+	                                            <a href="javascript:;" class="comment-operate">回复</a>
+	                                        </p>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+				
+				<div id="comment2" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">奇妙能力歌——</span>陈粒
+	                                </p>
+	                                <img class="pic" src="img/music03.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_2" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                                <div class="comment-box clearfix" user="other">
+	                                    <img class="myhead" src="img/img4.jpg" alt=""/>
+	                                    <div class="comment-content">
+	                                        <p class="comment-text"><span class="user">你就像风在说话：</span>我有那么多奇妙的能力，却留不住你。</p>
+				                        <p class="comment-time">
+				                            2014-02-19 14:36
+				                            <a href="javascript:;" class="comment-operate">回复</a>
+				                        </p>
+	                                    </div>
+	                                </div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment3" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">今天你要嫁给我——</span>陶喆 & 蔡依林
+	                                </p>
+	                                <img class="pic" src="img/music04.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_3" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment4" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">Let It Go——</span>孝琳
+	                                </p>
+	                                <img class="pic" src="img/music05.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_4" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment5" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">知足——</span>五月天
+	                                </p>
+	                                <img class="pic" src="img/music06.png" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_5" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment6" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">稻香——</span>周杰伦
+	                                </p>
+	                                <img class="pic" src="img/music07.jpeg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_6" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment7" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">再见二丁目——</span>杨千嬅
+	                                </p>
+	                                <img class="pic" src="img/music08.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_7" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment8" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">Try Everything——</span>Shakira
+	                                </p>
+	                                <img class="pic" src="img/music09.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_8" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment9" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">Curiosity——</span>Carly Rae Jepsen
+	                                </p>
+	                                <img class="pic" src="img/music10.jpeg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_9" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment10" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">Bye Bye Bye——</span>Lovestoned
+	                                </p>
+	                                <img class="pic" src="img/music11.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_10" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment11" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">Malaysia Chabor——</span>朱主爱
+	                                </p>
+	                                <img class="pic" src="img/music12.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_11" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment12" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">尚好的青春——</span>孙燕姿
+	                                </p>
+	                                <img class="pic" src="img/music13.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_12" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment13" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">红玫瑰——</span>陈奕迅
+	                                </p>
+	                                <img class="pic" src="img/music14.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_13" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment14" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">后会无期——</span>G.E.M.邓紫棋
+	                                </p>
+	                                <img class="pic" src="img/music15.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_14" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+				<div id="comment15" class="commentDiv hide">					
+                    <span class="glyphicon glyphicon-menu-left" style="font-size: 35px ;color:#5C4B51;"></span>
+                    <div class="commentBox">
+	                    <div class="box clearfix">
+	                        <img class="head" src="img/music.png" alt=""/>
+	                        <div class="content">
+	                            <div class="main">
+	                                <p class="txt">
+	                                    <span class="user">小苹果——</span>筷子兄弟
+	                                </p>
+	                                <img class="pic" src="img/music16.jpg" alt=""/>
+	                            </div>
+	                           
+	                            <div class="comment-list">
+	                                <div id="msg_15" class="comment-box clearfix" user="self" style="padding-top: 5px;"></div>
+	                            </div>
+	                            <div class="text-box" style="width: 180%;">
+	                                <textarea class="comment" autocomplete="off">评论…</textarea>
+	                                <button class="btn">回 复</button>
+	                                <span class="word"><span class="length">0</span>/140</span>
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+
+			</div>
+		</section> <!-- .cd-section -->
+	</main>
+    <nav class="cd-nav-container" id="cd-nav">
+		<header>
+			<h3>导航</h3>
+			<a href="#0" class="cd-close-nav">Close</a>
+		</header>
+
+		<ul class="cd-nav">
+			<li  data-menu="index">
+				<a href="index.html">
+					<span class="glyphicon glyphicon-home" style="font-size: 40px ;"></span>
+
+					<em>首页</em>
+				</a>
+			</li>
+
+			<li data-menu="careers">
+				<a href="musicList.html">
+					<span class="glyphicon glyphicon-music" style="font-size: 40px ;"></span>
+
+
+					<em>我的音乐</em>
+				</a>
+			</li>
+
+			<li data-menu="projects">
+				<a href="mood.html">
+					<span class="glyphicon glyphicon-edit" style="font-size: 40px;"></span>	
+	
+					<em>我的心情</em>
+				</a>
+			</li>
+
+			<li data-menu="about" class="cd-selected">
+				<a href="love.html">
+					<span class="glyphicon glyphicon-heart" style="font-size: 40px ;"></span>
+					<em>最爱Music</em>
+				</a>
+			</li>
+		</ul> <!-- .cd-3d-nav -->
+	</nav>
+    <div class="cd-overlay">
+        <!-- shadow layer visible when navigation is visible -->
+    </div>
+    
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/main.js"></script>
+
+	<script src="js/collection.js"></script>
+</body>
+</html>

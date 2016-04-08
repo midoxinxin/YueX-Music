@@ -1,0 +1,56 @@
+main .cd-content{
+  text-align: center;
+}
+main .main{
+  padding: 0;
+  width: 100%;
+  float: left;
+}
+main .header{
+  color: #ecf0f1;
+  margin: 25px 0;
+}
+
+main .main p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 100;
+}
+main .nav-top {
+  background: black;
+}
+main .nav-top a {
+  color: #ecf0f1;
+}
+
+/* ALL DEMO */
+main h1 {
+  color: #ffffff;
+  font-family: 'Roboto',Arial,sans-serif;
+  font-size: 44px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+main h1 span {
+  font-size: 44px;
+  display: block;
+}
+
+main .header{
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 10;
+  padding-top: 105px;
+  padding-bottom: 0;
+}
+
+main canvas{
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
